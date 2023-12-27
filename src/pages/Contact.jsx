@@ -31,7 +31,7 @@ const Contact = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/form/contact",
+        "https://backend.stg.initz.run/api/form/contact",
         user
       );
       if (res.data.success == true) {

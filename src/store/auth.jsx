@@ -25,7 +25,7 @@ const AppProvider = ({ children }) => {
 
   const userAuthentication = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/auth/user", {
+      const res = await fetch("https://backend.stg.initz.run/api/auth/user", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -44,7 +44,9 @@ const AppProvider = ({ children }) => {
   // to fetch services data
   const getServices = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/data/service");
+      const res = await axios.get(
+        "https://backend.stg.initz.run/api/data/service"
+      );
       if (res.status === 200) {
         setServices(res.data.message);
       }
