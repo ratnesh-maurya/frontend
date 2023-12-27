@@ -13,6 +13,9 @@ export default defineConfig({
   },
   plugins: [react()],
   build: {
+    rollupOptions: {
+      input: "src/main.js", // Adjust this path based on your project structure
+    },
     outDir: "build", // Specify the output directory here
   },
 });
